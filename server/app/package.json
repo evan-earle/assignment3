@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
+    "cors": "^2.8.5",
     "elysia": "latest",
     "express": "^4.21.2",
     "mongodb": "^6.12.0",
