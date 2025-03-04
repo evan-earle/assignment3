@@ -251,12 +251,12 @@ app.delete("/players/:id", async ({ params }) => {
   }
 });
 
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-app.use(express.static(join(__dirname, "dist")));
+// const __dirname = fileURLToPath(new URL(".", import.meta.url));
+// app.use(express.static(join(__dirname, "dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(join(__dirname, "dist", "index.html"));
+// });
 
 //Start the server and connect to MongoDB
 const port = 3000;
