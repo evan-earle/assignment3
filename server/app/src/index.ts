@@ -2,9 +2,6 @@ import { Elysia } from "elysia";
 import { MongoClient, ObjectId, Db } from "mongodb";
 import { z } from "zod";
 import { cors } from "@elysiajs/cors"; // Import CORS
-import { join } from "path";
-import { fileURLToPath } from "url";
-import express from "express";
 
 //MongoDB connection settings
 // const mongoUri = "mongodb://localhost:27017";
@@ -34,9 +31,14 @@ const connectToDB = async (): Promise<void> => {
 //Initialize Elysia app
 const app = new Elysia();
 
+const allowedOrigins = [
+  "https://assignment3-1-ujz8.onrender.com",
+  "http://localhost:5173",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow requests from your frontend
+    origin: allowedOrigins, // Allow requests from your frontend
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
     credentials: true, // If sending cookies/auth headers
   })
@@ -249,13 +251,6 @@ app.delete("/players/:id", async ({ params }) => {
     console.error("Error deleting player:", error);
     return { status: 500, error: "Failed to delete player" };
   }
-});
-
-const __dirname = fileURLToPath(new URL(".", import.meta.url));
-app.use(express.static(join(__dirname, "dist")));
-
-app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, "dist", "index.html"));
 });
 
 //Start the server and connect to MongoDB
