@@ -2,6 +2,9 @@ import { Elysia } from "elysia";
 import { MongoClient, ObjectId, Db } from "mongodb";
 import { z } from "zod";
 import { cors } from "@elysiajs/cors"; // Import CORS
+import { join } from "path";
+import { fileURLToPath } from "url";
+import express from "express";
 
 //MongoDB connection settings
 // const mongoUri = "mongodb://localhost:27017";
@@ -246,6 +249,13 @@ app.delete("/players/:id", async ({ params }) => {
     console.error("Error deleting player:", error);
     return { status: 500, error: "Failed to delete player" };
   }
+});
+
+const __dirname = fileURLToPath(new URL(".", import.meta.url));
+app.use(express.static(join(__dirname, "dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(join(__dirname, "dist", "index.html"));
 });
 
 //Start the server and connect to MongoDB
