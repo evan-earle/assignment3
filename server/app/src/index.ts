@@ -249,7 +249,15 @@ app.delete("/players/:id", async ({ params }) => {
 });
 
 //Start the server and connect to MongoDB
-app.listen(3000, async () => {
-  await connectToDB();
-  console.log("Server is running on http://localhost:3000");
-});
+const port = 3000;
+
+connectToDB()
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Server running on http://0.0.0.0:${port}`);
+    });
+  })
+  .catch((err) => {
+    console.error("Database connection failed:", err);
+    process.exit(1);
+  });
