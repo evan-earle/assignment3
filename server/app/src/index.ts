@@ -31,16 +31,12 @@ const connectToDB = async (): Promise<void> => {
 //Initialize Elysia app
 const app = new Elysia();
 
-const allowedOrigins = [
-  "https://assignment3-1-ujz8.onrender.com",
-  "http://localhost:5173",
-];
-
 app.use(
   cors({
-    origin: allowedOrigins, // Allow requests from your frontend
+    origin: "*", // Allow requests from your frontend
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
-    credentials: true, // If sending cookies/auth headers
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
