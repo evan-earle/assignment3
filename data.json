@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Nathan MacKinnon",
+    "team": "Colorado Avalanche",
+    "age": 29,
+    "position": "C",
+    "nationality": "Canada",
+    "awards": ["Calder", "Hart", "Stanley Cup"],
+    "stats": {
+      "goals": 14,
+      "assists": 52,
+      "points": 66
+    }
+  },
+  {
+    "name": "Connor McDavid",
+    "team": "Edmonton Oilers",
+    "age": 26,
+    "position": "C",
+    "nationality": "Canada",
+    "awards": ["Hart", "Art Ross", "Ted Lindsay"],
+    "stats": {
+      "goals": 64,
+      "assists": 89,
+      "points": 153
+    }
+  },
+  {
+    "name": "Auston Matthews",
+    "team": "Toronto Maple Leafs",
+    "age": 26,
+    "position": "C",
+    "nationality": "USA",
+    "awards": ["Rocket Richard", "Hart"],
+    "stats": {
+      "goals": 60,
+      "assists": 46,
+      "points": 106
+    }
+  },
+  {
+    "name": "Artemi Panarin",
+    "team": "New York Rangers",
+    "age": 30,
+    "position": "LW",
+    "nationality": "Russia",
+    "awards": ["Hart", "Ted Lindsay"],
+    "stats": {
+      "goals": 52,
+      "assists": 75,
+      "points": 127
+    }
+  },
+  {
+    "name": "David Pastrnak",
+    "team": "Boston Bruins",
+    "age": 27,
+    "position": "RW",
+    "nationality": "Czechia",
+    "awards": ["Rocket Richard"],
+    "stats": {
+      "goals": 61,
+      "assists": 52,
+      "points": 113
+    }
+  },
+  {
+    "name": "Cale Makar",
+    "team": "Colorado Avalanche",
+    "age": 25,
+    "position": "D",
+    "nationality": "Canada",
+    "awards": ["Calder", "Norris", "Stanley Cup"],
+    "stats": {
+      "goals": 28,
+      "assists": 58,
+      "points": 86
+    }
+  },
+  {
+    "name": "Leon Draisaitl",
+    "team": "Edmonton Oilers",
+    "age": 28,
+    "position": "C",
+    "nationality": "Germany",
+    "awards": ["Hart", "Art Ross"],
+    "stats": {
+      "goals": 55,
+      "assists": 73,
+      "points": 128
+    }
+  },
+  {
+    "name": "Sidney Crosby",
+    "team": "Pittsburgh Penguins",
+    "age": 36,
+    "position": "C",
+    "nationality": "Canada",
+    "awards": ["Hart", "Stanley Cup", "Art Ross"],
+    "stats": {
+      "goals": 35,
+      "assists": 58,
+      "points": 93
+    }
+  },
+  {
+    "name": "Alex Ovechkin",
+    "team": "Washington Capitals",
+    "age": 38,
+    "position": "LW",
+    "nationality": "Russia",
+    "awards": ["Hart", "Rocket Richard", "Stanley Cup"],
+    "stats": {
+      "goals": 42,
+      "assists": 33,
+      "points": 75
+    }
+  },
+  {
+    "name": "Andrei Vasilevskiy",
+    "team": "Tampa Bay Lightning",
+    "age": 29,
+    "position": "G",
+    "nationality": "Russia",
+    "awards": ["Vezina", "Conn Smythe", "Stanley Cup"],
+    "stats": {
+      "goals": 0,
+      "assists": 3,
+      "points": 3
+    }
+  }
+]
