@@ -4,18 +4,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "npm run build"
+    "start": "npm install && bun dev",
+    "build": "cd ../../ && npm run build"
   },
   "dependencies": {
     "@elysiajs/cors": "^1.2.0",
     "elysia": "latest",
-    "express": "^4.21.2",
     "mongodb": "^6.12.0",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0",
     "bun-types": "latest"
   },
   "module": "src/index.js"
